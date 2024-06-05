@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no">
+    <title>Facultad - Universidad Nacional de Jujuy</title>
+    <!-- Bootstrap CSS -->
+   	<link data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="/img/logo.png" alt="Logotipo" style="width: 100px; height: 50px;">
+                <div>
+                    <h1 class="h3">Facultad de Ingeniería</h1>
+                    <p class="mb-0">"Innovación y Excelencia"</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Facultad UNJu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Carreras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-md-3">
+                <div class="list-group mb-4">
+                    <a href="#" class="list-group-item list-group-item-action">Biblioteca</a>
+                    <a href="#" class="list-group-item list-group-item-action">Calendario Académico</a>
+                </div>
+                <div class="list-group">
+                    <div class="list-group-item bg-light">
+                        <h5>Calendario de Eventos</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>03 Junio:</strong> 2do Turno Ordinario de Exámenes - 2024
+                            </li>
+                            <li class="mb-2">
+                                <strong>15 Julio:</strong> Receso Invernal
+                            </li>
+                            <li>
+                                <strong>29 Julio:</strong> 3er Turno Ordinario de Exámenes - 2024
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="col-md-9">
+                <section>
+                    <h2>Sobre la Facultad</h2>
+                    <p>La Facultad de Ingeniería de la Universidad Nacional de Jujuy se dedica a la formación de profesionales en las áreas de las ciencias y la tecnología, promoviendo la innovación y la excelencia académica.</p>
+                </section>
+
+                <section class="mt-4">
+                    <h2>Noticias Recientes</h2>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Título de la noticia 1</h5>
+                            <p class="card-text">Descripción breve de la noticia 1.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Título de la noticia 2</h5>
+                            <p class="card-text">Descripción breve de la noticia 2.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-4">
+                    <h2>Multimedia</h2>
+                    <div class="embed-responsive embed-responsive-16by9 mb-3">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/video_id" allowfullscreen></iframe>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="/img/apu.jpg" class="img-fluid" alt="Imagen 1">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="/img/sistemas.jpg" class="img-fluid" alt="Imagen 2">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="/img/informatica.jpg" class="img-fluid" alt="Imagen 3">
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <div class="container">
+            <p>Contacto: Ítalo Palanca Nº 10, San Salvador de Jujuy, Jujuy, Argentina | Teléfono: +54 388 1234567 | Email: info@fi.unju.edu.ar</p>
+            <p>Síguenos en:
+                <a href="#" class="text-white me-2">Facebook</a>
+                <a href="#" class="text-white me-2">Twitter</a>
+                <a href="#" class="text-white">Instagram</a>
+            </p>
+            <p>&copy; 2024 Facultad de Ingeniería - UNJu. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
