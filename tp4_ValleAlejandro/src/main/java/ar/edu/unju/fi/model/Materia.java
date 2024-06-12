@@ -1,24 +1,37 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Materia {
-	public int codigo;
-	public String nombre;
-	public int curso;
-	public int cantidadHoras;
-	public String modalidad; // "virtual" o "presencial"
-	public Docente docente;
-	public Carrera carrera;
-	public Materia(int codigo, String nombre, int curso, int cantidadHoras, String modalidad, Docente docente,
-			Carrera carrera) {
+	private int codigo;
+	private String nombre;
+	private int curso;
+	private int horas;
+	@Autowired
+	private Docente docente;
+	@Autowired
+	private Carrera carrera;
+	private Modalidad modalidad;
+
+	public Materia() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Materia(int codigo, String nombre, int curso, int horas, Docente docente, Carrera carrera, Modalidad modalidad) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.curso = curso;
-		this.cantidadHoras = cantidadHoras;
-		this.modalidad = modalidad;
+		this.horas = horas;
 		this.docente = docente;
 		this.carrera = carrera;
+		this.modalidad = modalidad;
 	}
+
+
+
 	public int getCodigo() {
 		return codigo;
 	}
@@ -37,17 +50,11 @@ public class Materia {
 	public void setCurso(int curso) {
 		this.curso = curso;
 	}
-	public int getCantidadHoras() {
-		return cantidadHoras;
+	public int getHoras() {
+		return horas;
 	}
-	public void setCantidadHoras(int cantidadHoras) {
-		this.cantidadHoras = cantidadHoras;
-	}
-	public String getModalidad() {
-		return modalidad;
-	}
-	public void setModalidad(String modalidad) {
-		this.modalidad = modalidad;
+	public void setHoras(int horas) {
+		this.horas = horas;
 	}
 	public Docente getDocente() {
 		return docente;
@@ -61,5 +68,14 @@ public class Materia {
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
+	public Modalidad getModalidad() {
+		return modalidad;
+	}
+	public void setModalidad(Modalidad modalidad) {
+		this.modalidad = modalidad;
+	}
 
+	
+	
 }
+

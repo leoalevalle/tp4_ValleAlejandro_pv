@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head data-th-replace="~{/layouts/header :: head}"></head>
+<body>
+    <header data-th-replace="~{/layouts/header :: header}"></header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-sm-12 fondo-form p-5">
+                <div class="row mb-5">
+                    <div th:if="${exito}" class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong data-th-text="${mensaje}"></strong>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div th:if="${!exito && mensaje != ''}" class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong data-th-text="${mensaje}"></strong>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+                
+                <form th:action="@{/materias/guardar}" th:object="${materia}" method="post">
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Código</label>
+                        <input type="number" class="form-control" id="codigo" th:field="*{codigo}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" th:field="*{nombre}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="curso" class="form-label">Curso</label>
+                        <input type="number" class="form-control" id="curso" th:field="*{curso}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="horas" class="form-label">Horas</label>
+                        <input type="number" class="form-control" id="horas" th:field="*{horas}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="docente" class="form-label">Docente</label>
+                        <select class="form-select" id="docente" th:field="*{docente.legajo}">
+                            <option th:each="docente : ${docentes}" th:value="${docente.legajo}" th:text="${docente.nombre}"></option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="carrera" class="form-label">Carrera</label>
+                        <select class="form-select" id="carrera" th:field="*{carrera.codigo}">
+                            <option th:each="carrera : ${carreras}" th:value="${carrera.codigo}" th:text="${carrera.nombre}"></option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalidad" class="form-label">Modalidad</label>
+                        <select class="form-select" id="modalidad" th:field="*{modalidad}">
+                            <option th:each="modalidad : ${modalidad}" th:value="${modalidad}" th:text="${modalidad.name()}"></option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer data-th-replace="~{/layouts/footer :: footer}"></footer>
+</body>
+</html>
