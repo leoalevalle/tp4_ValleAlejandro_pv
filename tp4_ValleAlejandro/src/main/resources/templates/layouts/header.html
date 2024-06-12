@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th ="http://www.thymeleaf.org" lang="es">
+	<head th:fragment="head">
+		<meta charset="UTF-8">
+		<title data-th-text="${titulo}"></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no">
+		<link data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	</head>
+	<body>
+		
+		<!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="/img/logo.png" alt="Logotipo" style="width: 100px; height: 50px;">
+                <div>
+                    <h1 class="h3">Facultad de Ingeniería</h1>
+                    <p class="mb-0">"Innovación y Excelencia"</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Facultad UNJu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/alumnos/listado">Alumnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/carreras/listado">Carreras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/docentes/listado">Docentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materias/listado">Materias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+		
+	</body>
+</html>
