@@ -58,12 +58,4 @@ public class Carrera {
 		this.estado = estado;
 	}
 
-
-
-
-	@Override
-	public String toString() {
-		return "Carrera [codigo=" + codigo + ", nombre=" + nombre + ", cant_anios=" + cant_anios + ", estado=" + estado
-				+ "]";
-	}
 }

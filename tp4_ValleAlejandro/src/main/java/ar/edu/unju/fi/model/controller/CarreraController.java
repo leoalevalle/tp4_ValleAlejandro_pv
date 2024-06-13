@@ -39,8 +39,8 @@ public class CarreraController {
 	}
 	
 	@PostMapping("/guardar")
-	public ModelAndView guardarCarrera(@ModelAttribute("carrera") Carrera carrera) { //objeto
-		ModelAndView modelView = new ModelAndView("carreras"); //pagina html
+	public ModelAndView guardarCarrera(@ModelAttribute("carrera") Carrera carrera) {
+		ModelAndView modelView = new ModelAndView("carreras");
 		String mensaje;
 		carrera.setEstado(true);
 		boolean exito = CollectionCarrera.agregarCarrera(carrera);
@@ -51,7 +51,7 @@ public class CarreraController {
 		}
 		modelView.addObject("exito", exito);
 		modelView.addObject("mensaje",mensaje);
-		modelView.addObject("carreras",CollectionCarrera.getCarrera()); //el primer parametro "carreras" hace referencia al "${carreras}" de mi html de carreras en donde se hace un th:each
+		modelView.addObject("carreras",CollectionCarrera.getCarrera());
 		return modelView;
 	}
 	
@@ -61,7 +61,7 @@ public class CarreraController {
 		boolean edicion = true;
 		carreraEncontrada = CollectionCarrera.buscarCarrera(codigo);
 		model.addAttribute("edicion", edicion);
-		model.addAttribute("carrera", carreraEncontrada); //objeto
+		model.addAttribute("carrera", carreraEncontrada);
 		model.addAttribute("titulo", "Modificar Carrera");
 		return "carrera";
 	}
