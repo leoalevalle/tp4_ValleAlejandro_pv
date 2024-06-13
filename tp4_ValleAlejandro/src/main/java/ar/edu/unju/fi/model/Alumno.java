@@ -102,21 +102,6 @@ public class Alumno {
 
 	public void setLu(int lu) {
 		this.lu = lu;
-	}
-
-
-
-	@Override
-	public String toString() {
-		return "Alumno [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
-				+ ", telefono=" + telefono + ", fechaNac=" + fechaNac + ", lu=" + lu + "]";
-	}
-	
-	
-	
-
-
-	
-	
+	}	
 	
 }

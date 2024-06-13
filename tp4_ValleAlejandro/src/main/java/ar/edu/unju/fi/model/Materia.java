@@ -74,8 +74,5 @@ public class Materia {
 	public void setModalidad(Modalidad modalidad) {
 		this.modalidad = modalidad;
 	}
-
-	
-	
 }
 
