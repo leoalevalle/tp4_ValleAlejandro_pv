@@ -35,7 +35,7 @@ public class AlumnoController {
 		model.addAttribute("alumno", alumno);
 		model.addAttribute("edicion", edicion);
 		model.addAttribute("titulo", "Nuevo alumno");
-		return "alumno";
+		return "nuevoAlumno";
 	}
 	
 	@PostMapping("/guardar")
@@ -79,7 +79,7 @@ public class AlumnoController {
 			}
 		model.addAttribute("exito", exito);
 		model.addAttribute("mensaje",mensaje);
-		model.addAttribute("alumno", mensaje);
+		model.addAttribute("alumno", CollectionAlumno.getAlumno());
 		model.addAttribute("titulo", "Alumno");
 		return "redirect:/alumnos/listado";
 	}
